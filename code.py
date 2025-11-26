@@ -16,6 +16,7 @@ penguins_df = pd.get_dummies(penguins_df, dtype='int') # dtype='int' ensure the 
 
 # Step 3 - Perform preprocessing steps on the dataset - standarizing/scaling
 # Scaling variables 
+scaler = StandardScaler()
 X = scaler.fit_transform(penguins_df)
 penguins_preprocessed = pd.DataFrame(data=X,columns=penguins_df.columns)
 penguins_preprocessed.head(10)
